@@ -35,7 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: (https://interactive-card-ooreoluwas-projects-11b0b542.vercel.app/)
+- Live Site URL: (https://interactive-card-kappa-nine.vercel.app)
 
 ## My process
 
