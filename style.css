@@ -1,0 +1,477 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    background-color: #fff;
+}
+
+.cards-section {
+    background-image: url('./assets/images/bg-main-desktop.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 30%;
+    min-width: 300px;
+    min-height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    overflow: visible;
+}
+
+.cards-container {
+    position: relative;
+    width: 480px;
+    height: 400px;
+    margin-left: 30px;
+}
+
+.card-front {
+    position: absolute;
+    top: 20px;
+    left: 70px;
+    z-index: 2;
+}
+
+.card-front-img {
+    width: 330px;
+    height: 182px;
+    border-radius: 10px;
+    display: block;
+}
+
+.card-front-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 18px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    pointer-events: none;
+}
+
+.card-logo {
+    width: 60px;
+    height: 34px;
+}
+
+.card-number {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    letter-spacing: 3px;
+    line-height: 28px;
+    margin-bottom: 20px;
+    margin-top: auto;
+    word-break: break-word;
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-name {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.card-expiry {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+
+.card-back {
+    position: absolute;
+    top: 250px;
+    left: 150px;
+    z-index: 1;
+}
+
+.card-back-img {
+    width: 330px;
+    height: 182px;
+    border-radius: 10px;
+    display: block;
+}
+
+.card-cvc {
+    position: absolute;
+    top: 87px;
+    right: 45px;
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+}
+
+.form-section {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 3rem 0 2rem;
+    background-color: #fff;
+    min-height: 100vh;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 420px;
+}
+
+.form-group {
+    margin-bottom: 26px;
+}
+
+.form-row {
+    display: flex;
+    gap: 18px;
+}
+
+.form-group.half {
+    flex: 1;
+}
+
+label {
+    display: block;
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: hsl(278, 68%, 11%);
+    margin-bottom: 8px;
+}
+
+input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid hsl(270, 3%, 87%);
+    border-radius: 8px;
+    font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    color: hsl(278, 68%, 11%);
+    transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.error-message {
+    color: hsl(0, 100%, 66%);
+    font-size: 12px;
+    margin-top: 6px;
+    display: none;
+    min-height: 18px; 
+}
+
+.error-message.show {
+    display: block;
+}
+
+input.error,
+.error-border,
+input.error-border {
+    border-color: hsl(0, 100%, 66%);
+}
+
+.error {
+    
+}
+
+input::placeholder {
+    color: hsl(270, 3%, 87%);
+}
+
+input:focus {
+    outline: none;
+    border-color: hsl(278, 94%, 30%);
+    box-shadow: 0 0 0 4px rgba(133, 77, 255, 0.08);
+}
+
+input:focus-visible {
+    outline: 2px solid rgba(133, 77, 255, 0.14);
+    outline-offset: 2px;
+}
+
+.submit-btn {
+    width: 100%;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.12s ease, transform 0.06s ease;
+}
+
+.submit-btn:hover {
+    background-color: hsl(278, 68%, 20%);
+}
+
+.submit-btn:active {
+    transform: translateY(1px);
+    background-color: hsl(278, 68%, 18%);
+}
+
+.success-state {
+    text-align: center;
+    display: none;
+    width: 100%;
+    max-width: 420px;
+}
+
+.success-state.show {
+    display: flex;
+    flex-direction: column;   
+    align-items: center;      
+    justify-content: center;  
+    gap: 20px;                
+    padding: 20px;            
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 35px;
+}
+
+.success-title {
+    font-size: 28px;
+    font-weight: 500;
+    letter-spacing: 3.42px;
+    text-transform: uppercase;
+    color: hsl(278, 68%, 11%);
+    margin-bottom: 16px;
+}
+
+.success-message {
+    font-size: 18px;
+    font-weight: 500;
+    color: hsl(279, 6%, 55%);
+    margin-bottom: 48px;
+}
+
+.continue-btn {
+    width: 100%;
+    background-color: hsl(278, 68%, 11%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 18px;
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.12s ease, transform 0.06s ease;
+}
+
+.continue-btn:hover {
+    background-color: hsl(278, 68%, 20%);
+}
+
+.continue-btn:active {
+    transform: translateY(1px);
+    background-color: hsl(278, 68%, 18%);
+}
+
+.form-container.hidden {
+    display: none;
+}
+
+.submit-btn:focus,
+.continue-btn:focus {
+    outline: 3px solid rgba(133, 77, 255, 0.12);
+    outline-offset: 2px;
+}
+
+@media (max-width: 1024px) {
+    .cards-section {
+        width: 32%;
+        min-width: 280px;
+    }
+    
+    .cards-container {
+        width: 420px;
+        height: 350px;
+        margin-left: 20px;
+    }
+    
+    .card-front {
+        top: 70px;
+        left: 70px;
+    }
+    
+    .card-back {
+        top: 180px;
+        left: 100px;
+    }
+    
+    .card-front-img, .card-back-img {
+        width: 300px;
+        height: 165px;
+    }
+    
+    .card-front-content {
+        padding: 16px 20px;
+    }
+    
+    .card-logo {
+        width: 50px;
+        height: 28px;
+    }
+    
+    .card-number {
+        font-size: 18px;
+        letter-spacing: 2px;
+        margin-bottom: 14px;
+    }
+    
+    .card-name, .card-expiry {
+        font-size: 10px;
+        letter-spacing: 1.2px;
+    }
+    
+    .card-cvc {
+        top: 75px;
+        right: 38px;
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        flex-direction: column;
+    }
+    
+    .cards-section {
+        width: 100%;
+        height: 240px;
+        min-height: auto;
+        min-width: auto;
+        background-image: url('./assets/images/bg-main-mobile.png');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 32px 16px 0;
+        justify-content: center;
+        overflow: visible;
+    }
+    
+    .cards-container {
+        width: 100%;
+        height: 200px;
+        max-width: 375px;
+        margin: 0 auto;
+    }
+    
+    .card-front {
+        position: absolute;
+        left: 16px;
+        top: 126px;
+        z-index: 2;
+    }
+    
+    .card-front-img {
+        width: 286px;
+        height: 157px;
+    }
+    
+    .card-front-content {
+        padding: 18px 20px;
+    }
+    
+    .card-logo {
+        width: 54px;
+        height: 30px;
+    }
+    
+    .card-number {
+        font-size: 18px;
+        letter-spacing: 2.2px;
+        margin-bottom: 17px;
+    }
+    
+    .card-name, .card-expiry {
+        font-size: 9px;
+        letter-spacing: 1.29px;
+    }
+    
+    .card-back {
+        position: absolute;
+        right: 16px;
+        top: 32px;
+        z-index: 1;
+    }
+    
+    .card-back-img {
+        width: 286px;
+        height: 157px;
+    }
+    
+    .card-cvc {
+        top: 71px;
+        right: 37px;
+        font-size: 9px;
+        letter-spacing: 1.29px;
+    }
+    
+    .form-section {
+        padding: 91px 24px 45px;
+        min-height: auto;
+    }
+    
+    .form-container {
+        max-width: 327px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    label {
+        font-size: 11px;
+        margin-bottom: 6px;
+    }
+    
+    input {
+        padding: 11px 16px;
+        font-size: 16px;
+    }
+    
+    .submit-btn {
+        margin-top: 15px;
+        font-size: 16px;
+    }
+}
+
+input.error {
+  border: 1px solid hsl(0, 100%, 66%);
+}
+
+.error-message {
+  display: none;
+  color: hsl(0, 100%, 66%);
+  font-size: 12px;
+  margin-top: 5px;
+}
