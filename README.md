@@ -35,8 +35,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: (https://interactive-card-ooreoluwas-projects-11b0b542.vercel.app/)
 
 ## My process
 
